@@ -1,0 +1,105 @@
+/*--------------------------------------------------------------
+# proficiency arrow
+--------------------------------------------------------------*/
+
+#buttonColourGradientUnassessed {
+  color: #012970;
+  background-image: linear-gradient(to right, #f8f7ef, #f5f5d8);
+}
+
+#buttonColourGradientUnassessed:hover {
+  border-color: #4154f1;
+}
+
+#idInputUnassessed:checked + label {
+  border-color: #4153f196;
+  box-shadow: 0 0 0 0.25rem #a8afe796;
+}
+
+#buttonColourGradientInsufficient {
+  color: #012970;
+  background-image: linear-gradient(to right, #f8f7ef, #c0eb87);
+}
+
+#buttonColourGradientInsufficient:hover {
+  border-color: #4154f1;
+}
+
+#idInputInsufficient:checked + label {
+  border-color: #4153f196;
+  box-shadow: 0 0 0 0.25rem #a8afe796;
+}
+
+#buttonColourGradientEmerging {
+  color: #012970;
+  background-image: linear-gradient(to right, #c0eb87, #baef74);
+}
+
+#buttonColourGradientEmerging:hover {
+  border-color: #4154f1;
+}
+
+#idInputEmerging:checked + label {
+  border-color: #4153f196;
+  box-shadow: 0 0 0 0.25rem #a8afe796;
+}
+
+#buttonColourGradientDeveloping {
+  color: #012970;
+  background-image: linear-gradient(to right, #baef74, #8cf207);
+}
+
+#buttonColourGradientDeveloping:hover {
+  border-color: #4154f1;
+  /* border-width: 3px; */
+}
+
+#idInputDeveloping:checked + label {
+  border-color: #4153f196;
+  box-shadow: 0 0 0 0.25rem #a8afe796;
+}
+
+#buttonColourGradientProficient {
+  color: #012970;
+  background-image: linear-gradient(to right, #8cf207, #07f261);
+}
+
+#buttonColourGradientProficient:hover {
+  border-color: #4154f1;
+}
+
+#idInputProficient:checked + label {
+  border-color: #4153f196;
+  box-shadow: 0 0 0 0.25rem #a8afe796;
+}
+
+#buttonColourGradientExtending {
+  color: #012970;
+  background-image: linear-gradient(to right, #07f261, #33c152);
+}
+
+#buttonColourGradientExtending:hover {
+  border-color: #4154f1;
+}
+
+#idInputExtending:checked + label {
+  border-color: #4153f196;
+  box-shadow: 0 0 0 0.25rem #a8afe796;
+}
+
+.bi-caret-right-fill1 {
+  font-size: 40px;
+  color: #2ba746;
+  vertical-align: middle;
+  /* width: 64px;
+  height: 64px; */
+  /* margin-left: 5px;  */
+  /* text-align: center; */
+  /* background-color: #fd680e;
+  border-radius: 50%; */
+  /* text-align: center; */
+  /* border: 4px solid #fff;
+  transition: 0.3s;*/
+  /* display: inline-block;  */
+}
+

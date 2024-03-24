@@ -1,0 +1,12 @@
+/*--------------------------------------------------------------
+# Button - Override some default Bootstrap stylings
+--------------------------------------------------------------*/
+/* Close Button */
+.btn-close {
+  background-size: 25%;
+}
+
+.btn-close:focus {
+  outline: 0;
+  box-shadow: none;
+}

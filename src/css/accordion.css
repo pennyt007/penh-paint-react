@@ -1,0 +1,61 @@
+/*--------------------------------------------------------------
+# Accordion - Override some default Bootstrap stylings
+--------------------------------------------------------------*/
+
+.accordion-item { 
+  margin-bottom: 10px;
+  border: 1px solid #ebeef4;
+}
+
+.accordion-button:focus {
+  outline: 0;
+  box-shadow: none;
+}
+
+.accordion-button.collapsed {
+  opacity: 50%;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #012970;
+  background-color: #ffc107;
+  /* opacity: 50%; */
+  /* background-color: #f6f9ff; */
+}
+
+.accordion-button {
+  color: #012970;
+  background-color: #ffc107;
+  /* opacity: 50%; */
+  /* background-color: #f6f9ff; */
+}
+
+.accordion-flush .accordion-button {
+  padding: 15px 0;
+  background: none;
+  border: 0;
+}
+
+.accordion-flush .accordion-button:not(.collapsed) {
+  box-shadow: none;
+  color: #4154f1;
+}
+
+.accordion-flush .accordion-body {
+  padding: 0 0 15px 0;
+  color: #3e4f6f;
+  font-size: 15px;
+}
+
+.accordion-title {
+  /* font-size: 10px; */
+  font-weight: 600;
+  /* color: #012970; */
+  transition: 0.3s;
+}
+
+.custom-center {
+  display: flex;
+  align-items: center; /* Vertically center */
+  justify-content: center; /* Horizontally center */
+}

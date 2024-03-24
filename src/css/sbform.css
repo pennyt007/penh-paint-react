@@ -1,0 +1,39 @@
+
+/* ---------------------------------------------------------------
+# Sidebar Form
+-------------------------------------------------------------- */
+
+.sidebar-form {
+  padding: 80px 20px 0px 300px;
+}
+
+/* In your CSS file or component */
+.sidebar-form .scrollable-section {
+  max-height: 600px; /* Adjust the height as needed */
+  overflow-x: hidden; 
+  overflow-y: scroll; 
+  border: 1px solid #ccc; /* Optional: Add a border for styling */
+  padding: 10px; /* Optional: Add padding for spacing */
+}
+
+
+
+/* .sidebar-cardgroup .card {
+  margin-bottom: 0px;
+}
+
+.sidebar-cardgroup .card-title {
+  padding: 0px 0px 0px 0px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.sidebar-cardgroup .card-body {
+  padding: 0px 0px 0px 0px;
+} */
+
+@media (max-width: 1199px) {
+  .sidebar-form {
+    padding: 80px 0px 0px 0px;
+  }
+}

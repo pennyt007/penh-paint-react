@@ -1,0 +1,84 @@
+
+/* ---------------------------------------------------------------
+# Sidebar CardGroup
+-------------------------------------------------------------- */
+
+.sidebar-cardgroup {
+  padding: 0px 20px 0px 300px;
+}
+
+.sidebar-cardgroup-no-breadcrumbs {
+  padding: 80px 20px 0px 300px;
+}
+
+.sidebar-cardgroup .card,
+.sidebar-cardgroup-no-breadcrumbs .card {
+  margin-bottom: 0px;
+}
+
+.sidebar-cardgroup .card-title,
+.sidebar-cardgroup-no-breadcrumbs .card-title {
+  padding: 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.sidebar-cardgroup .card-body,
+.sidebar-cardgroup-no-breadcrumbs .card-body {
+  padding: 0;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 1199px) {
+  .sidebar-cardgroup,
+  .sidebar-cardgroup-no-breadcrumbs {
+    padding: 80px 0px 0px 0px;
+  }
+}
+
+/* 
+
+
+
+.sidebar-cardgroup {
+  padding: 0px 20px 0px 300px;
+}
+
+.sidebar-cardgroup-no-breadcrumbs {
+  padding: 80px 20px 0px 300px;
+}
+
+
+.sidebar-cardgroup .card {
+  margin-bottom: 0px;
+}
+
+.sidebar-cardgroup-no-breadcrumbs .card {
+  margin-bottom: 0px;
+}
+
+.sidebar-cardgroup .card-title {
+  padding: 0px 0px 0px 0px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.sidebar-cardgroup-no-breadcrumbs .card-title {
+  padding: 0px 0px 0px 0px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.sidebar-cardgroup .card-body {
+  padding: 0px 0px 0px 0px;
+}
+
+.sidebar-cardgroup-no-breadcrumbs .card-body {
+  padding: 0px 0px 0px 0px;
+}
+
+@media (max-width: 1199px) {
+  .sidebar-cardgroup, .sidebar-cardgroup-no-breadcrumbs {
+    padding: 80px 0px 0px 0px;
+  }
+} */

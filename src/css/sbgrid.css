@@ -1,0 +1,56 @@
+
+/* ---------------------------------------------------------------
+# Sidebar Grid (Table)
+-------------------------------------------------------------- */
+
+table {
+  width: 100%
+}
+
+th, td {
+  padding: 16px;
+  color: #012970;
+}
+
+.row-even-bg-colour {
+  background-color: #899bbd7c;
+} 
+
+.grid {
+  padding: 0px 20px 0px 300px;
+}
+
+.grid-no-breadcrumbs {
+  padding: 80px 20px 0px 300px;
+}
+
+@media (max-width: 1199px) {
+  .grid, .grid-no-breadcrumbs {
+    padding: 80px 0px 0px 0px;
+  }
+}
+
+.grid-pagination {
+  display: flex;
+  align-items: center; 
+  justify-content: flex-end;
+  color: #012970;
+}
+
+/* Prevent text selection and focus outline */
+.grid-pagination span {
+  user-select: none;
+  outline: none;
+}
+
+.center-header {
+  text-align: center;
+}
+
+.center-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+

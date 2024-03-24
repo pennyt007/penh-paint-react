@@ -1,0 +1,25 @@
+/* ---------------------------------------------------------------
+# Sidebar Carousel
+-------------------------------------------------------------- */
+
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  cursor: default;
+  pointer-events: none;
+}
+
+.carousel-header {
+  font-size: 25px;
+  font-weight: 600;
+  color: #012970;
+  transition: 0.3s;
+}
+
+.carousel-footer {
+  font-size: 16px;
+  font-weight: 600;
+  color: #012970;
+  transition: 0.3s;
+}

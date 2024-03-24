@@ -1,0 +1,67 @@
+/* ---------------------------------------------------------------
+# Grid Table
+-------------------------------------------------------------- */
+
+.react-bootstrap-table table {
+  height: 1000px;
+  display: block;
+  border-collapse: collapse;
+}
+
+.react-bootstrap-table tbody {
+  height: calc(100% - 35px - 2px);
+  overflow-y: auto;
+}
+
+.react-bootstrap-table .table-bordered {
+  border-top: none;
+}
+
+.react-bootstrap-table th {
+  position: sticky;
+  top: 1px;
+  background-color: #edeef1;
+  /* background-color: #fff; */
+}
+
+.react-bootstrap-table th::before {
+  position: absolute;
+  content: "";
+  top: 1px;
+  left: -2px;
+  width: calc(100% + 2px);
+  height: 1px;
+  background-color: #edeef1;
+  /* background-color: #dee2e6; */
+}
+
+.react-bootstrap-table th::after {
+  position: absolute;
+  content: "";
+  bottom: -2px;
+  left: -2px;
+  width: calc(100% + 2px);
+  height: 1px;
+  background-color: #edeef1;
+  /* background-color: #dee2e6; */
+}
+
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-top: 4px solid \9;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+.dropup .caret,
+.navbar-fixed-bottom .dropdown .caret {
+  border-top: 0;
+  border-bottom: 4px dashed;
+  border-bottom: 4px solid \9;
+  content: "";
+}

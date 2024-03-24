@@ -1,0 +1,9 @@
+/*--------------------------------------------------------------
+# Checkbox - Override some default Bootstrap stylings
+--------------------------------------------------------------*/
+
+.checkbox-container {
+  display: flex; /* Use flexbox to center items horizontally */
+  align-items: center; /* Vertically center items */
+  justify-content: center; /* Horizontally center items */
+}
