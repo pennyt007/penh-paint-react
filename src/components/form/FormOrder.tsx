@@ -17,7 +17,8 @@
 //   onGridRefresh: () => void;
 // }
 
-// const FormBehaviour: React.FC<FormBehaviourProps> = (props) => {
+// const FormOrder: React.FC<FormBehaviourProps> = (props) => {
+
 //   const { row, icon, onGridRefresh } = props;
 
 //   // state variable to hold the form fields
@@ -139,4 +140,4 @@
 //   );
 // };
 
-// export default FormBehaviour;
+// export default FormOrder;

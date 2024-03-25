@@ -24,7 +24,6 @@ interface GridProps<T> {
 
 // react functional component renders grid with filters for menu item
 const Grid: React.FC<GridProps<any>> = (props) => {
-  
   // destructuring
   const {
     sidebarId,
@@ -76,15 +75,15 @@ const Grid: React.FC<GridProps<any>> = (props) => {
   }, [gridSelected]);
 
   useEffect(() => {
-    // apply filters to active data 
-    console.log("gridDatum", gridData, dataSelected, gridSelected)
-    let filteredActiveData = gridData[0].data
-    // let filteredActiveData = gridData.find(
-    //   (gridDatum) =>{
-    //     gridDatum.id === dataSelected && gridDatum.grid === gridSelected}
-    // ).data;
+    // apply filters to active data
+    let filteredActiveData = [...gridData]
+    //console.log('test', test)
+    filteredActiveData = filteredActiveData.find(
+      (gridDatum) =>
+        gridDatum.id === dataSelected && gridDatum.grid === gridSelected
+    ).data;
 
-    console.log("after", filteredActiveData)
+    console.log("after", filteredActiveData);
     // apply filters to grid data
     if (activeGrid) {
       activeGrid.grid_filters?.map((filter) => {
@@ -172,7 +171,7 @@ const Grid: React.FC<GridProps<any>> = (props) => {
         </div>
 
         <div className="col-2">
-        {activeGrid !== undefined && (
+          {activeGrid !== undefined && (
             <GridFilter
               filters={activeGrid.grid_filters}
               onFilterChanged={handleFilterChanged}

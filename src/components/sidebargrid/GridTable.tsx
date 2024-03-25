@@ -8,14 +8,8 @@ interface GridTableProps<T extends object> {
 }
 
 const GridTable: React.FC<GridTableProps<any>> = (props) => {
-
   // destructuring
-  const {
-    data,
-    columns,
-    gridSelected,
-    onGridRefresh,
-  } = props;
+  const { data, columns, gridSelected, onGridRefresh } = props;
 
   // functions
   const preparedColumns = columns.grid.columns.map(
@@ -23,12 +17,11 @@ const GridTable: React.FC<GridTableProps<any>> = (props) => {
       let cellFunction = null;
 
       if (column.hasOwnProperty("Cell") && typeof column.Cell === "string") {
-       
-        // if (column.Cell === "editOrder") {
-        //   cellFunction = (row: any) => editOrder(row);
-        // } else if (column.Cell === "editJob") {
-        //   cellFunction = (row: any) => editJob(row);
-        // }
+        if (column.Cell === "editOrder") {
+          cellFunction = (row: any) => editOrder(row);
+        } else if (column.Cell === "editJob") {
+          cellFunction = (row: any) => editJob(row);
+        }
 
         // cell property exists and is a string
         // convert it back to a function with eval
@@ -47,34 +40,41 @@ const GridTable: React.FC<GridTableProps<any>> = (props) => {
   //let data = useMemo(() => values, [values]);
   //let columns = useMemo(() => preparedColumns, [header.columns]);
 
-  // const editOrder = (row: any) => {
-  //   // open form to edit an order
-  //   return (
-  //     <>
-  //       <FormOrder
-  //         row={row.cell.row.original}
-  //         icon={"bi bi-pencil-square fs-6"}
-  //         onGridRefresh={onGridRefresh}
-  //       ></FormOrder>
-  //     </>
-  //   );
-  // };
+  const editOrder = (row: any) => {
+    // open form to edit an order
+    return (
+      <>
+        <button className="btn btn-sm btn-warning">
+          <i className="bi bi-pencil-square fs-6"></i>
+        </button>
 
-  // const editJob = (row: any) => {
-  //   // open form to edit a job
-  //   return (
-  //     <>
-  //       <FormJob
-  //         row={row.cell.row.original}
-  //         icon={"bi bi-pencil-square fs-6"}
-  //         modalTitle={`Job`}
-  //         onGridRefresh={onGridRefresh}
-  //       ></FormJob>
-  //     </>
-  //   );
-  // };
+        {/* <FormOrder
+          row={row.cell.row.original}
+          icon={"bi bi-pencil-square fs-6"}
+          onGridRefresh={onGridRefresh}
+        ></FormOrder> */}
+      </>
+    );
+  };
 
-   // render
+  const editJob = (row: any) => {
+    // open form to edit a job
+    return (
+      <>
+        <button className="btn btn-sm btn-warning">
+          <i className="bi bi-pencil-square fs-6"></i>
+        </button>
+        {/* <FormJob
+          row={row.cell.row.original}
+          icon={"bi bi-pencil-square fs-6"}
+          modalTitle={`Job`}
+          onGridRefresh={onGridRefresh}
+        ></FormJob> */}
+      </>
+    );
+  };
+
+  // render
   return (
     <>
       <GridTableContainer
