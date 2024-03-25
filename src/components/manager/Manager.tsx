@@ -1,75 +1,31 @@
 import { useEffect, useState } from "react";
 import { CanceledError } from "../../services/api-client";
-import { User, getCurrentUser } from "../../services/user-service";
-// import {
-//   Student,
-//   pointOfProgressStudentService,
-// } from "../../services/student-service";
-// import familyService from "../../services/family-service";
+//import { User, getCurrentUser } from "../../services/user-service";
 import Error from "../error/Error";
-import GridCarousel from "../sidebargrid/SidebarCarousel";
 import GridSidebar from "../sidebargrid/Sidebar";
 import Grid from "../sidebargrid/Grid";
-// import {
-//   PointOfProgressState,
-//   PointOfProgressStateSummary,
-//   pointOfProgressStateService,
-// } from "../../services/pointofprogress-service";
-import { useNavigate } from "react-router-dom";
 import inventoryService, {inventoryInterface} from "../../services/inventory-service";
 
 // functional component
 const Manager = () => {
   // state variables
-  const [user, setUser] = useState<User>();
+  //const [user, setUser] = useState<User>();
   const [error, setError] = useState("");
   const [gridSelected, setGridSelected] = useState("inventory");
   const [totalGridRefreshes, setTotalGridRefreshes] = useState(0);
-  const [manager, setManager] = useState();
   const [inventory, setInventory] = useState<inventoryInterface[]>();
  
-  // initialize useNavigate
- const navigate = useNavigate();
-
+ 
   // fetch current user asynchronously when component mounts
   // updates the "user" state variable
-  useEffect(() => {
-    const getUser = async () => {
-      const user = await getCurrentUser();
-      if (user) setUser(user);
-    };
-    getUser();
-  }, []);
-
-  // fetch inventory
   // useEffect(() => {
-  //   if (user) {
-  //     const { request, cancel } = familyService.getId<Student>(
-  //       user.user.family_member_id
-  //     );
-  //     // response data is used to update "students" state variable
-  //     // first student is set as selected student
-  //     request
-  //       .then((res) =>
-  //         setStudents({
-  //           all: res.data,
-  //           ids: res.data.map((student) => student.student_id),
-  //           selected: res.data[0],
-  //         })
-  //       )
-  //       .catch((err) => {
-  //         // check if error is axios's CanceledError if not
-  //         // error message is stored in "error" state variable
-  //         if (err instanceof CanceledError) return;
-  //         setError(err.message);
-  //       });
-
-  //     // clean up function cancels request when component
-  //     // is unmounted. prevents memory leaks
-  //     return () => cancel();
-  //   }
-  // }, [user]);
-
+  //   const getUser = async () => {
+  //     const user = await getCurrentUser();
+  //     if (user) setUser(user);
+  //   };
+  //   getUser();
+  // }, []);
+  
   // fetch inventory
   useEffect(() => {
       const { request, cancel } = inventoryService.getAll<inventoryInterface>();
@@ -89,47 +45,7 @@ const Manager = () => {
     }
   , [totalGridRefreshes]);
 
-  // update the point of progress's state to posted
-  //const handleAcceptPointOfProgress = async (
- // ) => {
-  //   try {
-  //     const user = await getCurrentUser();
-  //     if (user) {
-  //       const newPointOfProgressState: PointOfProgressState = {
-  //         point_of_progress_id:
-  //           pointOfProgressStateSummary.point_of_progress_id,
-  //         point_of_progress_state_type_id: 50,
-  //         user_id: user.user.user_id,
-  //       };
-  //       await pointOfProgressStateService.create(newPointOfProgressState);
-  //     }
-  //   } catch (err: any) {
-  //     // check if error is axios's CanceledError if not
-  //     // error message is stored in "error" state variable
-  //     if (err instanceof CanceledError) return;
-  //     setError(err.message);
-  //   }
-  //};
-
-  // called when student is selected in the carousel update
-  // the "selected" property of "student" state variable
-  // const handleStudentChanged = (student: Student) => {
-  //   setStudents((prevState) => ({ ...prevState, selected: student }));
-  // };
-
-  // use selected point of progress to navigate to Learning Update
-  // const handleViewPointOfProgress = async (
-  //   point_of_progress_id: number
-  // ) => {
-  //   navigate("/learningUpdate", {
-  //     state: {
-  //       point_of_progress_id: point_of_progress_id,
-  //       grid_sidebar_id: 35,
-  //       previous_grid_sidebar_id: 10,
-  //     },
-  //   });
-  // };
-
+ 
   // called when item changed in the grid sidebar
   const handleGridSidebarChanged = (
     rootItemName: string,

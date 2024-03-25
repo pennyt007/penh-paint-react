@@ -40,8 +40,10 @@ const GridTable: React.FC<GridTableProps<any>> = (props) => {
   //let data = useMemo(() => values, [values]);
   //let columns = useMemo(() => preparedColumns, [header.columns]);
 
-  const editOrder = (row: any) => {
+  const editOrder = (row: any) => { 
     // open form to edit an order
+    console.log(row)
+    onGridRefresh
     return (
       <>
         <button className="btn btn-sm btn-warning">
@@ -59,6 +61,7 @@ const GridTable: React.FC<GridTableProps<any>> = (props) => {
 
   const editJob = (row: any) => {
     // open form to edit a job
+    console.log(row)
     return (
       <>
         <button className="btn btn-sm btn-warning">

@@ -28,11 +28,11 @@ interface FormProps<T extends FieldValues> {
 // a FormProps object as a parameter
 export const initializeForm = <T extends FieldValues>({
   schema,
-  defaultValues,
+  // defaultValues,
 }: FormProps<T>) => {
   return useForm<T>({
     resolver: zodResolver(schema),
-    defaultValues: defaultValues as DeepPartial<T>,
+    // defaultValues: defaultValues as DeepPartial<T>
   });
 };
 
