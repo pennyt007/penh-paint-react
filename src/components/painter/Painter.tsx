@@ -7,7 +7,7 @@ import Grid from "../sidebargrid/Grid";
 import inventoryService, {inventoryInterface} from "../../services/inventory-service";
 
 // functional component
-const Manager = () => {
+const Painter = () => {
   // state variables
   const [error, setError] = useState("");
   const [gridSelected, setGridSelected] = useState("inventory");
@@ -71,7 +71,7 @@ const Manager = () => {
       {!error && inventory && (
         <aside id="sidebar" className="sidebar">
           <GridSidebar
-            sidebarId={10}
+            sidebarId={20}
             sidebarItemBadges={0}
             onItemChanged={handleGridSidebarChanged}
             onError={handleError}
@@ -81,7 +81,7 @@ const Manager = () => {
       <div className="grid-no-breadcrumbs">
         {inventory && (
           <Grid
-            sidebarId={10}
+            sidebarId={20}
             gridData={inventory}
             gridSelected={gridSelected}
             dataSelected={1}
@@ -93,4 +93,4 @@ const Manager = () => {
   );
 };
 
-export default Manager;
+export default Painter;

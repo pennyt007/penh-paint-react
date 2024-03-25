@@ -4,6 +4,7 @@ import { ToastContainer } from "react-toastify";
 import { User } from "../../services/user-service";
 import PageHome from "../pages/PageHome";
 import Manager from "../manager/Manager";
+import Painter from "../painter/Painter";
 import Logout from "../logout/Logout";
 
 interface MainSectionsProps {
@@ -19,6 +20,7 @@ const MainSections: React.FC<MainSectionsProps> = ({ user, setUser }) => (
     <Routes>
       <Route path="/" element={<PageHome setUser={setUser} />} />
       <Route path="/manager" element={<Manager />} />
+      <Route path="/painter" element={<Painter />} />
       <Route path="/logout" element={<Logout />} />
     </Routes>
   

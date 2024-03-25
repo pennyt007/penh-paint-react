@@ -73,20 +73,11 @@ const FormLogin: React.FC<FormLoginProps> = ({ setUser }) => {
         setUser(currentUser);
         const userRole = currentUser.user.user_role;
         
-        // if (userRole === "GUARDIAN") {
-        //   navigate("/familyStudents");
-        // }
-        // if (userRole === "TEACHER") {
-        //   navigate("/teacherClassroom", {
-        //     state: { staff_id: currentUser.user.staff_id, grid_sidebar_id: 20},
-        //   });
-        // }
-        // if (userRole === "PRINCIPAL") {
-        //   navigate("/principalSchool");
-        // }
         if (userRole === "MANAGER") {
-          console.log("manager")
           navigate("/manager");
+        }
+        if (userRole === "PAINTER") {
+          navigate("/painter");
         }
 
       }
